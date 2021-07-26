@@ -93,12 +93,12 @@ void Map_free(Map* m) {
 
 int Map_str_hash(char *str)
 {
-    int hash = 5381;
-    int c;
+	int hash = 5381;
+	int c;
 
-    while (c = *str++) {
-        hash = ((hash << 5) + hash) + c;
+	while (c = *str++) {
+		hash = ((hash << 5) + hash) + c;
 	}
 
-    return hash;
+	return hash;
 }
