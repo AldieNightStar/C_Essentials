@@ -37,7 +37,7 @@ static void __map_grow_when_cap(Map *map) {
 	if (size == 0) return;
 	if (size != cap) return;
 	map->cap = cap * 2;
-	MapEntry** newEntries = malloc(sizeof(MapEntry) * map->cap);
+	MapEntry** newEntries = malloc(sizeof(MapEntry*) * map->cap);
 	for (int i = 0; i < size; i++) {
 		newEntries[i] = map->entries[i];
 	}
